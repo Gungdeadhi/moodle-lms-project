@@ -83,6 +83,10 @@ body.pagelayout-login {
         width: 100%;
         margin: 0 auto 16px;
     }
+    .login-form-username input.form-control {
+    width: 100%;
+    }
+
 
     .login-form-password .input-group {
         width: 100%;
@@ -90,6 +94,7 @@ body.pagelayout-login {
     }
 
     .login-form-password input.form-control {
+        width: 100%;
         flex: 1 1 auto;
         padding-right: 48px;
     }

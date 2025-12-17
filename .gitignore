@@ -1,0 +1,22 @@
+# Moodle local config
+config.php
+
+# Moodle runtime directories
+cache/
+localcache/
+temp/
+filedir/
+sessions/
+moodledata/
+muc/
+
+# Generated assets
+/public/theme/*/scss/*.css
+/temp/theme/
+*.css.map
+
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
