@@ -1,0 +1,124 @@
+// center layout
+.jeho-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Login card
+.jeho-login-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 2.5rem 2.2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+// Remove instruction text
+.login-instructions {
+    display: none;
+}
+
+.login-divider {
+    display: none;
+}
+
+.login-heading {
+    display: none;
+}
+
+.d-flex {
+    display: none;
+}
+
+//Button style 
+.login-container button,
+.login-container input[type="submit"] {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+// Input style
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    border-radius: 8px;
+}
+
+body.pagelayout-login #loginguestbtn {
+    display: none;
+}
+
+body.pagelayout-login {
+
+    .login-logo {
+        height: 88px;
+        width: auto;
+    }
+
+    .login-form-forgotpassword,
+    .login-signup {
+        margin-top: 0.75rem;
+    }
+
+    .login-form-forgotpassword {
+        float: right;
+    }
+
+    .login-signup {
+        float: left;
+    }
+
+    .login-signup::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .login-form-username,
+    .login-form-password {
+        max-width: 376px;
+        width: 100%;
+        margin: 0 auto 16px;
+    }
+
+    .login-form-password .input-group {
+        width: 100%;
+        display: flex;
+    }
+
+    .login-form-password input.form-control {
+        flex: 1 1 auto;
+        padding-right: 48px;
+    }
+
+    .login-form-password .toggle-sensitive-btn {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+        padding: 0;
+        height: auto;
+    }
+
+    .login-form-password .input-group {
+        position: relative;
+    }
+
+    button[data-modal="alert"] {
+        display: none;
+    }
+}
+
+// body.pagelayout-login #region-main .login-instructions {
+//   display: none !important;
+// }
+
+// body.pagelayout-login #region-main .login-heading {
+//   display: none !important;
+// }
+

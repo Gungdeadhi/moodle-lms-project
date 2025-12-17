@@ -1,0 +1,31 @@
+.navbar {
+  --bs-navbar-bg: #6A1F99;           // warna background
+  --bs-navbar-color: #ffffff;         // warna link normal
+  --bs-navbar-hover-color: #03B199;   // warna link hover
+  --bs-navbar-active-color: #03B199;  // warna link aktif
+  --bs-navbar-brand-color: #ffffff;   // warna logo/brand
+  --bs-navbar-brand-hover-color: #03B199;
+
+  background-color: var(--bs-navbar-bg) !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+.navbar .nav-link {
+  color: var(--bs-navbar-color) !important;
+  box-shadow: none !important;
+}
+
+.navbar .nav-link:hover {
+  background-color: transparent !important;
+  color: var(--bs-navbar-hover-color) !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:focus {
+  color: var(--bs-navbar-active-color) !important;
+  background: transparent !important;
+}
+
+.navbar .nav-link::after {
+  display: none !important;
+}

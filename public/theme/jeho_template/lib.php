@@ -32,3 +32,39 @@ function theme_jeho_template_get_main_scss_content($theme) {
 
     return $scss;
 }
+
+function theme_jeho_template_get_extra_scss($theme) {
+    $content = '';
+    $imageurl = $theme->setting_file_url('backgroundimage', 'backgroundimage');
+
+    // set background image settings
+    if (!empty($imageurl)) {
+        $content .= '@media (min-width: 768px) {';
+        $content .= 'body { ';
+        $content .= "background-image: url('$imageurl'); background-size: cover;";
+        $content .= ' } }';
+    }
+
+    // Sets the login background image
+    $loginbackgroundimageurl = $theme->setting_file_url('loginbackgroundimage', 'loginbackgroundimage');
+    if (!empty($loginbackgroundimageurl)) {
+        $content .= 'body.pagelayout-login #page { ';
+        $content .= "background-image: url('$loginbackgroundimageurl'); background-size: cover;";
+        $content .= ' }';
+    }
+
+    return !empty($theme->settings->scss) ? "{$theme->settings->scss} \n {$content}" : $content;
+}
+
+function theme_jeho_template_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo' || $filearea === 'backgroundimage' || $filearea === 'loginbackgroundimage')) {
+        $theme = theme_config::load('jeho_template');
+        
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
+        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+    } else {
+        send_file_not_found();
+    }
+}
