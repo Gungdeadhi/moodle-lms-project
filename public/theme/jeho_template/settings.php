@@ -1,6 +1,8 @@
 <?php 
 defined('MOODLE_INTERNAL') || die();
 
+// This class use for setting management theme jeho_template in moodle web
+
 if ($ADMIN->fulltree) {
 
     // General settings page
@@ -43,7 +45,7 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
-    //Background image settings
+    // Background image settings
     $name = 'theme_jeho_template/backgroundimage';
     $title = get_string('backgroundimage', 'theme_boost');
     $description = get_string('backgroundimage_desc', 'theme_boost');

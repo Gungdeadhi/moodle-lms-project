@@ -1,16 +1,7 @@
 <?php
 defined('MOODLE_INTERNAL') || die();
 
-// function theme_jeho_template_get_main_scss_content($theme) {
-//     $parent = theme_config::load('boost');
-//     $scss = file_get_contents($parent->dir . '/scss/preset/default.scss');
-
-//     $childpreset = $theme->dir . '/scss/preset/default.scss';
-//     if (file_exists($childpreset)) {
-//         $scss .= "\n" . file_get_contents($childpreset);
-//     }
-//     return $scss;
-// }   
+// This class use for lib theme jeho_template   
 
 function theme_jeho_template_get_main_scss_content($theme) {
     global $CFG;
