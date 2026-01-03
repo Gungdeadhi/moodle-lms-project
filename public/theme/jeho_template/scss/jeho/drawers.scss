@@ -1,3 +1,19 @@
+.dashboard-welcome-card{
+    position: relative;
+    padding: 50px 50px 50px 24px;
+    border-radius: 16px;
+    background: linear-gradient(
+        to right,
+        #6A1F99 55%,
+        #E71C1C 75%,
+        #FF4040 100%
+        
+    );
+    color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
 // body #page-my-index,
 // body #page-site-index,
 // body #page-admin-search {
@@ -7,29 +23,7 @@
 //         transform: translateX(-100%);
 //     }
 
+   // #6F5454 0%, 
+
 //     // &.drawer-open-right
-// }
-
-// body:not(.pagelayout-course) {
-
-//     // .drawer-toggler.drawer-right-toggle {
-//     //     margin-left: 0 !important;
-//     //     margin-right: auto !important;
-//     //     order: -1;
-//     // }
-
-//     // #theme_boost-drawers-blocks {
-//     //     left: 0;
-//     //     right: auto;
-//     //     transform: translateX(-100%);
-//     // }
-
-//     // &.drawer-open-right #theme_boost-drawers-blocks {
-//     //     transform: translateX(0);
-//     // }
-
-//     // &.drawer-open-right #page {
-//     //     margin-left: 285px;
-//     //     margin-right: 0;
-//     // }
 // }

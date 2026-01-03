@@ -2,6 +2,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+global $USER, $PAGE;
 require_once($CFG->libdir . '/behat/lib.php');
 require_once($CFG->dirroot . '/course/lib.php');
 
@@ -14,6 +15,12 @@ if (isloggedin()) {
     $courseindexopen = false;
     $blockdraweropen = false;
 }
+
+// Detect dashboar page
+$isdashboard = ($PAGE->pagelayout === 'mydashboard');
+
+// get usename 
+$username = $USER->firstname;
 
 if (defined('BEHAT_SITE_RUNNING') && get_user_preferences('behat_keep_drawer_closed') != 1) {
     $blockdraweropen = true;
@@ -68,6 +75,8 @@ $templatecontext = [
     'courseindexopen' => $courseindexopen,
     'blockdraweropen' => $blockdraweropen,
     'courseindex' => $courseindex,
+    'isdashboard' => $isdashboard,
+    'username' => $username,
     'primarymoremenu' => $primarymenu['moremenu'],
     'secondarymoremenu' => $secondarynavigation ?: false,
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],

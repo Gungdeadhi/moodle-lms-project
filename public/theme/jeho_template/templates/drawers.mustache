@@ -87,6 +87,21 @@
                     {{> core/moremenu}}
                 </div>
             {{/secondarymoremenu}}
+            {{^ courseindex}}
+            {{#isdashboard}}
+            <div class="dashboard-welcome-card">
+                <div class="welcome-content">
+                    <h4 class="mb-1">
+                        Selamat datang, {{username}}!
+                    </h4>
+                    <p class="mb-0">
+                        Selamat datang di platform E-Learning kami!
+                    </p>
+                </div>
+            </div>
+            {{/isdashboard}}
+            {{/ courseindex}}
+
             <div id="page-content" class="pb-3 d-print-block">
                 <div id="region-main-box">
                     {{#hasregionmainsettingsmenu}}
