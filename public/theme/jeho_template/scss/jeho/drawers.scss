@@ -2,13 +2,15 @@
     position: relative;
     padding: 50px 50px 50px 24px;
     border-radius: 16px;
-    background: linear-gradient(
-        to right,
-        #6A1F99 55%,
-        #E71C1C 75%,
-        #FF4040 100%
-        
-    );
+    background: 
+        url('/theme/jeho_template/pix/image3.png') right center / 220px auto no-repeat,
+        linear-gradient(
+            to left,
+            
+            #81349d 0%,
+            #771d8e 35%,
+            #6A1F99 55%
+        );
     color: #ffffff;
     overflow: hidden;
     margin-bottom: 1.5rem;
