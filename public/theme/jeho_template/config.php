@@ -23,7 +23,7 @@ $THEME->layouts = [
         'regions' => array(),
     ),
 
-    // Main course page.
+    // Main course page
     'course' => array(
         'file' => 'drawers.php',
         'regions' => array('side-pre'),
@@ -74,12 +74,6 @@ $THEME->layouts = [
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
     ),
-    // Should display the content and basic headers only
-    // 'print' => array(
-    //     'file' => 'columns1.php',
-    //     'regions' => array(),
-    //     'defaultregions' => array(nofooter)
-    // ),
 ];
 
 $THEME->editor_sheets = [];

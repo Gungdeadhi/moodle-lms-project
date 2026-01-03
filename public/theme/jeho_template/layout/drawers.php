@@ -2,11 +2,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-
-
 require_once($CFG->libdir . '/behat/lib.php');
 require_once($CFG->dirroot . '/course/lib.php');
-
 
 $addblockbutton = $OUTPUT->addblockbutton();
 
@@ -85,4 +82,3 @@ $templatecontext = [
 ];
 
 echo $OUTPUT->render_from_template('theme_jeho_template/drawers', $templatecontext);
-
