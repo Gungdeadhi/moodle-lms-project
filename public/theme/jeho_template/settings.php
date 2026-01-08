@@ -61,12 +61,12 @@ if ($ADMIN->fulltree) {
     $page->add($setting);
 
     // Image poster dashboard settings
-    // $name = 'theme_jeho_template/imageposter';
-    // $title = get_string('imageposter', 'theme_jeho_template');
-    // $description = get_string('imageposter_desc', 'theme_jeho_template');
-    // $setting = new admin_setting_configstoredfile($name, $title, $description, 'imageposter');
-    // $setting = set_updatedcallback('theme_reset_all_cache');
-    // $page->add($setting);
+    $name = 'theme_jeho_template/imageposter';
+    $title = get_string('imageposter', 'theme_jeho_template');
+    $description = get_string('imageposter_desc', 'theme_jeho_template');
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'imageposter');
+    $setting->set_updatedcallback('theme_reset_all_cache');
+    $page->add($setting);
 
     // Variable body color
     $name = 'theme_jeho_template/brandcolor';

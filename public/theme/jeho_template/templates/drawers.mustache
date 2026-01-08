@@ -132,6 +132,16 @@
                     </div>
                 </div>
             </div>
+            {{^ courseindex}}
+            {{#isdashboard}}
+            {{#imageposter}}
+            <div class="dashboard-image-poster">
+                <img src="{{imageposter}}" alt="Panduan belajar">
+            </div>
+            {{/imageposter}}
+            {{/isdashboard}}
+            {{/ courseindex}}
+
         </div>
         {{> theme_boost/footer }}
     </div>

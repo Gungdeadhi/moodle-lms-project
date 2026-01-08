@@ -22,6 +22,11 @@ $isdashboard = ($PAGE->pagelayout === 'mydashboard');
 // get usename 
 $username = $USER->firstname;
 
+// get image poster from theme setting
+$theme = theme_config::load('jeho_template');
+$imageposter = $theme->setting_file_url('imageposter', 'imageposter');
+
+
 if (defined('BEHAT_SITE_RUNNING') && get_user_preferences('behat_keep_drawer_closed') != 1) {
     $blockdraweropen = true;
 }
@@ -77,6 +82,7 @@ $templatecontext = [
     'courseindex' => $courseindex,
     'isdashboard' => $isdashboard,
     'username' => $username,
+    'imageposter' => $imageposter,
     'primarymoremenu' => $primarymenu['moremenu'],
     'secondarymoremenu' => $secondarynavigation ?: false,
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
