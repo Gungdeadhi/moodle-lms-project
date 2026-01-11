@@ -144,7 +144,9 @@
 
         </div>
         {{> theme_boost/footer }}
-        {{> theme_jeho_template/footer }}
+        {{#showfooter}}
+            {{> theme_jeho_template/footer }}
+        {{/showfooter}}
     </div>
     {{{ output.standard_after_main_region_html }}}
 </div>
