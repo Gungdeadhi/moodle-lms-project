@@ -1,4 +1,57 @@
+/* 1. Paksa footer keluar dari batasan container tema */
+#page-footer.footer-custome {
+    background-color: #1D142C !important;
+    width: 100vw;           /* Lebar 100% dari view width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;    /* Trik agar elemen keluar dari pembungkus yang sempit */
+    margin-right: -50vw;
+    padding: 40px 0;
+    color: white;
+}
+
+/* 2. Mengatur isi konten di dalam footer agar tetap rapi di tengah */
 .footer-container {
-    background-color: #1D142C;
-    width: 100%;
+    max-width: 1200px;     /* Area teks tetap di tengah (tidak mepet layar) */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 3. SOLUSI FOOTER MENGAMBANG (Sticky Footer) */
+/* Tambahkan ini agar halaman minimal setinggi layar */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Pastikan elemen pembungkus utama Moodle mengambil sisa ruang */
+#page {
+    flex: 1 0 auto; 
+}
+
+#page-footer {
+    flex-shrink: 0;
+}
+
+/* Tambahan styling agar rapi */
+.footer-section h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.2rem;
 }
