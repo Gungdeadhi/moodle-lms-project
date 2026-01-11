@@ -16,11 +16,27 @@ if (isloggedin()) {
     $blockdraweropen = false;
 }
 
-// Detect dashboar page
-$isdashboard = ($PAGE->pagelayout === 'mydashboard');
+$username = '';
+$isdashboard = false;
+$showfooter = false;
 
-// get usename 
-$username = $USER->firstname;
+$isfrontpage = ($PAGE->pagelayout === 'frontpage');
+$isdashboard = ($PAGE->pagelayout === 'mydashboard');
+$ismycourse = ($PAGE->pagelayout === 'mycourses');
+$iscourse = ($PAGE->pagelayout === 'course');
+
+$ismycourse = (
+    $PAGE->pagelayout === 'coursecategory' || $PAGE->pagelayout === 'mycourses' || 
+    $PAGE->url->compare(new moodle_url('/my/index.php'), URL_MATCH_BASE)
+);
+
+if (isloggedin() && !isguestuser()) {
+    $username = $USER->firstname;
+
+    if ($isdashboard || $isfrontpage || $ismycourse || $iscourse) {
+        $showfooter = true;
+    }
+}
 
 // get image poster from theme setting
 $theme = theme_config::load('jeho_template');
@@ -81,6 +97,7 @@ $templatecontext = [
     'blockdraweropen' => $blockdraweropen,
     'courseindex' => $courseindex,
     'isdashboard' => $isdashboard,
+    'showfooter' => $showfooter,
     'username' => $username,
     'imageposter' => $imageposter,
     'primarymoremenu' => $primarymenu['moremenu'],
